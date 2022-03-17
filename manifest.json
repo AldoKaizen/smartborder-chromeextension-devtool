@@ -1,0 +1,27 @@
+{
+    "name": "Get SmartBorder Token",
+    "description": "Provides a quickly way to access the security token",
+    "version": "0.2",
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "clipboardWrite",
+        "clipboardRead"
+    ],
+    "action": {"default_icon": "favicon.png"},
+    "background": {
+		
+        "service_worker": "background.js"
+    },
+    "content_scripts": [{
+        "matches": [
+            "http://localhost:*/*",
+            "https://*.smartborder.com/*"
+        ],
+        "js": [
+            "content.js"
+        ],
+        "run_at": "document_idle"
+    }],
+    "manifest_version": 3
+}
