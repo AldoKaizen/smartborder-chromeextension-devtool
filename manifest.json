@@ -2,6 +2,7 @@
     "name": "Get SmartBorder Token",
     "description": "Provides a quickly way to access the security token",
     "version": "0.2",
+	
     "permissions": [
         "tabs",
         "activeTab",
